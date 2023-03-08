@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/seguranca
+    username: seguranca
+    password: seguranca
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+server:
+  error:
+    include-message: always
+    include-binding-error: always
+
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+

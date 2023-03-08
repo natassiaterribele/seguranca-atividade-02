@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-seguranca
+    environment:
+      - POSTGRES_USER=seguranca
+      - POSTGRES_PASSWORD=seguranca
+      - POSTGRES_DB=seguranca
+    volumes:
+      - ./data/base.sql:/docker-entrypoint-initdb.d/base.sql
+      - ./data/insert.sql:/docker-entrypoint-initdb.d/insert.sql
+    networks:
+      - app
+    ports:
+      - "5432:5432"
+    restart: always
+
+  app:
+    container_name: seguranca
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: seguranca-app
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-seguranca:5432/seguranca
+      - SPRING_DATASOURCE_USER=seguranca
+      - SPRING_DATASOURCE_PASSWORD=seguranca
+    ports:
+      - "8080:8080"
+    networks:
+      - app
+    depends_on:
+      - postgres
+
+networks:
+  app:
+
