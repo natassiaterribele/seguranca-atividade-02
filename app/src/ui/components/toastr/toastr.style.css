@@ -1,5 +1,5 @@
 .toastr {
-  background: rgb(175, 29, 29);
+  background: rgb(29, 80, 175);
   width: 350px;
   height: 150px;
   text-align: justify;
@@ -11,7 +11,7 @@
   border-radius: 10px;
   left: 20px;
   top: 100px;
-  border-bottom: 4px solid rgb(97, 17, 17);
+  border-bottom: 4px solid rgb(30, 17, 97);
   z-index: 20;
 }
 

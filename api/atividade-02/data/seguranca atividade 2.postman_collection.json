@@ -93,6 +93,72 @@
 			"response": []
 		},
 		{
+			"name": "alterar senha",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"novaSenha\": \"anaclara@cwi.com.br\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/alterar-senha/SEU-TOKEN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"alterar-senha",
+						"SEU-TOKEN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "esqueci senha",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"novaSenha\": \"senha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/alterar-senha/SEU-TOKEN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"alterar-senha",
+						"SEU-TOKEN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "editar usuario",
 			"request": {
 				"auth": {

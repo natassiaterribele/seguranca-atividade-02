@@ -1,11 +1,22 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/seguranca
+    url: jdbc:postgresql://localhost:5433/seguranca-modulo
     username: seguranca
     password: seguranca
   jpa:
     hibernate:
       ddl-auto: validate
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${EMAIL_SMTP}
+    password: ${SENHA_SMTP}
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
 
 server:
   error:

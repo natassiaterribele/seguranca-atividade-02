@@ -45,7 +45,7 @@ export function RegisterUserScreen() {
         onChange={handleChange}
       />
       <div className="adjust-button">
-        <Button onClick={handleSubmit}>Cadastrar-se</Button>
+        <Button onClick={handleSubmit}>Cadastrar</Button>
       </div>
       <LinkButton
         linkButtonName="Já possui uma Conta? Faça seu Login"

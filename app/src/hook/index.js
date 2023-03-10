@@ -1,3 +1,5 @@
+export { useChangePasswordInputs } from './useChangePasswordInputs/useChangePasswordInputs.hook';
+export { useForgotPasswordInputs } from './useForgotPasswordInputs/useForgotPasswordInputs.hook';
 export { useFormInputs } from './useFormInputs/useFormInputs.hook';
 export { useGetMyUser } from './useGetMyUser/useGetMyUser.hook';
 export { useLogout } from './useLogout/useLogout.hook';

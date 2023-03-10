@@ -31,6 +31,7 @@ export function UserLoginScreen() {
           <Button>Entrar</Button>
         </div>
         <LinkButton linkButtonName="Cadastre-se" link="/register" />
+        <LinkButton linkButtonName="Esqueci minha senha" link="/forgot" />
       </FormContainer>
     </form>
   );

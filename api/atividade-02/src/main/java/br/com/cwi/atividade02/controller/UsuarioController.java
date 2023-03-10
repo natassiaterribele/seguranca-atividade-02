@@ -1,5 +1,7 @@
 package br.com.cwi.atividade02.controller;
 
+import br.com.cwi.atividade02.controller.request.AlterarSenhaRequest;
+import br.com.cwi.atividade02.controller.request.EsqueciSenhaRequest;
 import br.com.cwi.atividade02.controller.request.UsuarioEditarRequest;
 import br.com.cwi.atividade02.controller.request.UsuarioIncluirRequest;
 import br.com.cwi.atividade02.controller.response.UsuarioDetalharResponse;
@@ -7,6 +9,7 @@ import br.com.cwi.atividade02.controller.response.UsuarioResponse;
 import br.com.cwi.atividade02.service.UsuarioDetalharService;
 import br.com.cwi.atividade02.service.UsuarioEditarService;
 import br.com.cwi.atividade02.service.UsuarioIncluirService;
+import br.com.cwi.atividade02.service.UsuarioSenhaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +31,8 @@ public class UsuarioController {
     @Autowired
     private UsuarioDetalharService usuarioDetalharService;
 
-
+    @Autowired
+    private UsuarioSenhaService usuarioSenhaService;
 
     @PostMapping
     @ResponseStatus(CREATED)
@@ -46,5 +50,15 @@ public class UsuarioController {
     @ResponseStatus(OK)
     public UsuarioDetalharResponse detalharUsuario () {
         return usuarioDetalharService.detalhar ();
+    }
+
+    @PostMapping("/esqueci-senha")
+    public void esqueciSenha(@RequestBody @Valid EsqueciSenhaRequest request) {
+        usuarioSenhaService.esqueciSenha(request);
+    }
+
+    @PostMapping("/alterar-senha/{token}")
+    public void alterarSenha(@Valid @RequestBody AlterarSenhaRequest request, @PathVariable String token) {
+        usuarioSenhaService.alterarSenha(request, token);
     }
 }

@@ -31,8 +31,9 @@ public class SecurityConfig {
                 .and()
                     .authorizeRequests()
                         .antMatchers("/*/**/publico").permitAll()
+                        .antMatchers("/usuarios/esqueci-senha").permitAll()
+                        .antMatchers("/usuarios/alterar-senha/*").permitAll()
                         .antMatchers(POST, "/usuarios").permitAll()
-                        .antMatchers(GET, "/livros").permitAll()
 
                 .and()
                     .authorizeRequests()

@@ -27,6 +27,8 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-seguranca:5432/seguranca
       - SPRING_DATASOURCE_USER=seguranca
       - SPRING_DATASOURCE_PASSWORD=seguranca
+      - EMAIL_SMTP=seu_email_gmail_smtp
+      - SENHA_SMTP=sua_senha_gmail_smtp
     ports:
       - "8080:8080"
     networks:

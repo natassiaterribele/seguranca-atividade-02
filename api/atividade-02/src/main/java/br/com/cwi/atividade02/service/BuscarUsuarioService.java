@@ -21,4 +21,10 @@ public class BuscarUsuarioService {
         return usuarioRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, USUARIO_NAO_ENCONTRADO));
     }
+
+    public Usuario porEmail(String email) {
+
+        return usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, USUARIO_NAO_ENCONTRADO));
+    }
 }

@@ -26,7 +26,6 @@ export function Toastr() {
         message.type === TOAST_TYPE.SUCCESS ? 'success' : ''
       }`}
     >
-      <h2>{message.type}</h2>
       <p className="toastr-message">{message.message}</p>
     </div>
   );
