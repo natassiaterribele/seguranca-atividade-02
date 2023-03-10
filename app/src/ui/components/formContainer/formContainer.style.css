@@ -1,0 +1,21 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  background: #201a0d;
+  max-width: 400px;
+  padding: 0 70px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid var(--yellow-button-border);
+  box-shadow: 0 0 20px var(--yellow-button-font);
+}
+
+.container-form img {
+  padding-top: 30px;
+}
+
+.center-form {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}

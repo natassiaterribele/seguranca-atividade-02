@@ -1,0 +1,21 @@
+.input-text {
+  border-radius: 5px;
+  background-color: #f6f6f6;
+  border: none;
+  padding: 15px 32px 10px;
+  font-size: 16px;
+  z-index: 1;
+  transition: all 0.2s ease;
+  border-bottom: 5px solid var(--white)
+}
+
+.input-text:focus {
+  background-color: #fff;
+  border-bottom:  5px solid var(--yellow-button-border);
+  outline: none;
+}
+
+label {
+  padding-bottom: 10px;
+}
+

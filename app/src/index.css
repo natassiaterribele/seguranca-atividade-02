@@ -1,0 +1,41 @@
+:root {
+  --brown: #201a0d;
+  --yellow: #F8B700;
+  --white: #ffffff;
+  --black: #000000;
+  --yellow-button-font: #ffae00;
+  --yellow-button-border: #cc9010;
+  --gray-card-border: #535353;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--brown);
+  background-attachment: fixed;
+  color: var(--white);
+}
+
+h1, h2, p, ul, li, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.adjust-button {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
